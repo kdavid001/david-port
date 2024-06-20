@@ -74,16 +74,22 @@
 	$(".button, a, button").mouseup(function() {
 		$(this).blur();
 	});
-	 $(".header").fadeIn("slow");      
-                    $(".about").ready(function(){
 
-			let repeatCount = 4;
+
+ 
+
+    
+                $(".header")  // Set the color first
+                    .fadeIn("slow");         // Fade in the text
+                    $(".about").ready(function(){
+                        // Number of times to repeat the fade-in
+                        let repeatCount = 3;
                         let currentIndex = 0;
                         
                         function fadeInWithDelay() {
                             if (currentIndex < repeatCount) {
-
-				    $(".h1-large").fadeIn("slow", function() {
+                                // Fade in the element
+                                $(".h1-large").fadeIn("slow", function() {
                                     // After fading in, wait for 1 second (1000 milliseconds)
                                     setTimeout(function() {
                                         // After the delay, fade out the element
@@ -91,8 +97,7 @@
                                             // Increment the index and repeat
                                             currentIndex++;
                                             fadeInWithDelay();
-						// final fadein. 
-                                        $(".h1-large").fadeIn("slow");
+                                            $(".h1-large").fadeIn("slow");
                                         });
                                     }, 1000); // Delay of 1000 milliseconds (1 second)
                                 });
@@ -103,5 +108,25 @@
                         fadeInWithDelay();
                     });
 
+                    (function() {
+                        // https://dashboard.emailjs.com/admin/account
+                        emailjs.init({
+                          publicKey: "hS3fSCI9TvW8Tv_Jw",
+                        });
+                    })();
+                    
+                    window.onload = function() {
+                        document.getElementById('contact-form').addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            // these IDs from the previous steps
+                            emailjs.sendForm('service_8i2yzm3', 'contact_form', this)
+                                .then(() => {
+                                    alert('Your Request had been sent!');
+                                }, (error) => {
+                                    alert('Error please try again...', error);
+                                });
+                        });
+                    }
+        
 })(jQuery);
 
