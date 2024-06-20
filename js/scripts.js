@@ -74,6 +74,34 @@
 	$(".button, a, button").mouseup(function() {
 		$(this).blur();
 	});
+	 $(".header").fadeIn("slow");      
+                    $(".about").ready(function(){
+
+			let repeatCount = 4;
+                        let currentIndex = 0;
+                        
+                        function fadeInWithDelay() {
+                            if (currentIndex < repeatCount) {
+
+				    $(".h1-large").fadeIn("slow", function() {
+                                    // After fading in, wait for 1 second (1000 milliseconds)
+                                    setTimeout(function() {
+                                        // After the delay, fade out the element
+                                        $(".h1-large").fadeOut("slow", function() {
+                                            // Increment the index and repeat
+                                            currentIndex++;
+                                            fadeInWithDelay();
+						// final fadein. 
+                                        $(".h1-large").fadeIn("slow");
+                                        });
+                                    }, 1000); // Delay of 1000 milliseconds (1 second)
+                                });
+                            }
+                        }
+            
+                        // Start the fade-in process when the document is ready
+                        fadeInWithDelay();
+                    });
 
 })(jQuery);
 
