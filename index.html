@@ -108,7 +108,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="text-container first">
-                        <h2>Welcome!</h2> <p>I'm a Computer Engineering student in Covenant University currently on a first class CGPA, with a knack for problem-solving and a passion for technology. I am Certified in Microsoft Office, proficient in Python, and skilled in full-stack web development, I'm also deeply committed to learning cybersecurity and Machine learning as the concept of making a Human like (Artificial Intelligence) model facinates me. Beyond my technical expertise, I bring strong leadership skills, Teamwork and a friendly, collaborative approach to every project. I am very good in working with people, I aim for Excellence and Efficiency in all I do.</p>
+                        <h2>Welcome😎!</h2> <p>I'm a Computer Engineering student in Covenant University currently on a first class CGPA, with a knack for problem-solving and a passion for technology. I am Certified in Microsoft Office, proficient in Python, and skilled in full-stack web development, I'm also deeply committed to learning cybersecurity and Machine learning as the concept of making a Human like (Artificial Intelligence) model facinates me. Beyond my technical expertise, I bring strong leadership skills, Teamwork and a friendly, collaborative approach to every project. I am very good in working with people, I aim for Excellence and Efficiency in all I do.</p>
                     </div> 
                 </div> 
                 <div class="col-lg-4">
@@ -326,7 +326,6 @@
     <!-- end of section divider -->
 
     <!-- Project carousel -->
-<div>
     <div class="container">
         <div class="row justify-content-center">
                         <div class="col-lg-8">
@@ -405,26 +404,50 @@
             </div>
         </div>
     </div>
-</div>
 <!-- end of project carousel -->
     
+
+
+
     <!-- Contact -->
-    <div id="contact" class="form-1 bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Contact details</h2>
-                    <p class="p-heading">Please don't hesitate to get in touch with me. The fastest way is to send me an email This is my personal email. <a class="blue no-line" href="#your-link">korededavid03@gmail.com</a></p>
-                </div> 
-            </div> 
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Place Contact Form here. -->
-                    
-                </div> 
-            </div> 
+    <head>
+
+        <link rel="stylesheet" href="index.js">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <form id="contact-form">
+            <div>
+                <h2>Contact Form💬📝</h2>
+            </div>
+            <!-- To simplify the tutorial, the value is static. -->
+             <div class="number">
+            <input type="hidden" name="contact_number" value="">
+             </div>
+    
+             <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="user_name" required>
+            </div>
+    
+            <div class="form-group"> 
+            <label for="email">Email</label>
+            <input type="email" name="user_email" required>
+            </div>
+    
+            <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" rows="5" required></textarea>
+    
+            <div>
+            <button type="submit" value="Send"> send </button>
+            </div>
         </div>
-    </div> 
+        </form>
+    </body>
     <!-- end of contact -->
 
 
